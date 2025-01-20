@@ -127,7 +127,7 @@ h3{
 
 .swiper {
   width: 100%;
-  height: 50dvh; /* Pas de hoogte aan naar wens */
+  height: 80dvh; /* Pas de hoogte aan naar wens */
 }
 
 .swiper-slide {
