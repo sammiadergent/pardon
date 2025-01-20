@@ -16,8 +16,15 @@ h1{
 font-family:"Major Mono Display";
 font-size: 2rem;
 color: #B1374E;
+padding-top: 10%;
 
 }
+h2{
+  font-family:"Poppins";
+  font-size: 1rem;
+  color: #B99D69;
+  
+  }
 
 p{
 font-family: Poppins;
@@ -26,7 +33,27 @@ font-style: normal;
 letter-spacing: -0.26px;
 color: black;
 }
+b{
+  font-family:"Major Mono Display";
+  font-size: 1rem;
+  color: #B99D69;
+}
+h3{
+  font-family:"Major Mono Display";
+  font-size: 1rem;
+  color: white;
+}
 
+.menu{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 8px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: #B1374E;
+  color: white !important;
+}
 
 #background{
   position:absolute;
@@ -88,8 +115,230 @@ color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-top: 10%;
+  padding-top: 8%;
   text-align: center;
-  
+}
 
+.leftTekst{
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+}
+
+.swiper {
+  width: 100%;
+  height: 50dvh; /* Pas de hoogte aan naar wens */
+}
+
+.swiper-slide {
+  display: flex; /* Zorg dat de inhoud naast elkaar wordt geplaatst */
+  justify-content: center; /* Optioneel: center de inhoud horizontaal */
+  align-items: center; /* Optioneel: center de inhoud verticaal */
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: row; /* Zorg dat tekst en afbeelding naast elkaar staan */
+  width: 100%;
+  align-items: center; /* Centreer de items verticaal */
+  padding-top: 8%;
+}
+
+.text-section {
+  flex: 1; /* Laat de tekstsectie flexibel ruimte innemen */
+  padding: 10%;
+}
+
+.image-section {
+  flex: 1; /* Laat de afbeeldingssectie flexibel ruimte innemen */
+  padding-right: 10%;
+}
+
+.image-section img {
+  max-width: 100%; /* Zorg dat de afbeelding niet groter wordt dan de container */
+  height: auto; /* Behoud de verhoudingen van de afbeelding */
+}
+
+.swiper-button-next, .swiper-button-prev{
+  color: #B1374E !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #B1374E !important;
+}
+
+.omEnOm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px;
+  width: 100%;
+  gap: 50px;
+}
+.left{
+  align-self: flex-start;
+  width: 40%;
+}
+.right{
+  align-self: flex-end;
+  width: 40%;
+}
+#demo{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 25%; 
+  padding-right: 25%;
+  gap: 30px;
+  padding-top: 50px;
+}
+.meetTheMaker{
+  display: flex;
+  flex-direction: row;
+  padding-left: 8px;
+  padding-right: 8px;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  padding-top: 3%;
+  background-color: #B1374E;
+  padding-left: 8px;
+  padding-bottom: 3%;
+}
+
+.backgroundmobile{
+  display: none;
+}
+
+
+/* Algemeen voor mobiele apparaten */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; /* Verklein de titel */
+    padding-top: 5%;
+  }
+
+  h2 {
+    font-size: 0.9rem; /* Pas subtitels aan */
+  }
+
+  p {
+    font-size: 0.9rem; /* Kleinere tekstgrootte */
+    padding: 0 10px; /* Voeg extra ruimte toe aan de zijkanten */
+  }
+
+  .menu {
+   display: none;
+  }
+  #header {
+    height: 100dvh; /* Laat de hoogte automatisch aanpassen */
+    width: 100%; /* Zorg dat de header de volledige breedte heeft */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Voeg ruimte tussen elementen toe */
+  }
+  #background {
+    display: none;
+    
+  }
+  .backgroundmobile{
+    display: block;
+    position:absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100dvh;
+    object-fit: cover;
+    object-position: center;
+    
+  }
+  #logo {
+    width: 90%; /* Zorg dat het logo kleiner wordt */
+    height: auto; /* Behoud de verhoudingen */
+    padding-left: 0; /* Verwijder extra padding */
+    margin: 0 auto; /* Centreer het logo */
+  }
+
+  .button {
+    font-size: 0.9rem; /* Maak de knoptekst kleiner */
+    padding: 10px; /* Zorg voor meer aanraakruimte */
+  }
+
+  #intro {
+    padding-top: 5%; /* Verminder de ruimte bovenaan */
+  }
+  .mock{
+    width: 80%;
+  }
+  .centreTekst {
+    padding-left: 5%; /* Minder padding aan de zijkanten */
+    padding-right: 5%;
+  }
+
+  #opEenRij {
+    flex-direction: column; /* Zet items onder elkaar */
+    gap: 20px; /* Voeg ruimte tussen items toe */
+  }
+
+  .klein{
+    width: 20%;
+  }
+
+  .slide-content {
+    display: flex; /* Activeer Flexbox */
+    flex-direction: column; /* Zet tekst en afbeelding onder elkaar */
+    align-items: center; /* Centreer horizontaal */
+    justify-content: center; /* Centreer verticaal */
+    padding: 5%;
+    height: 100%; /* Zorg dat de hoogte van de container wordt gebruikt */
+    text-align: center; /* Centreer tekst */
+}
+
+.text-section, .image-section {
+    width: 100%; /* Zorg dat de secties de volledige breedte innemen */
+    padding: 5%; /* Voeg ruimte toe aan de zijkanten */
+}
+
+.image-section img {
+    max-width: 60%; /* Zorg dat de afbeelding kleiner wordt */
+    padding-bottom: 20%;
+}
+
+.swiper {
+    height: 40dvh; /* Pas de hoogte van de Swiper aan */
+    display: flex; /* Activeer Flexbox */
+    align-items: center; /* Centreer inhoud in Swiper */
+    justify-content: center; /* Centreer inhoud in Swiper */
+}
+
+  .omEnOm {
+    gap: 30px; /* Verminder de ruimte tussen secties */
+  }
+
+  .left, .right {
+    width: 80%; /* Zorg dat ze breder worden op mobiel */
+    align-self: center; /* Centreer de secties */
+  }
+
+  #demo {
+    padding-left: 10%; /* Minder padding voor kleinere schermen */
+    padding-right: 10%;
+    gap: 20px;
+  }
+
+  .meetTheMaker {
+    flex-direction: column; /* Zet items onder elkaar */
+    gap: 20px;
+  }
+
+  .footer {
+    flex-direction: column; /* Zet de footer-elementen onder elkaar */
+    text-align: center;
+    padding: 5%;
+  }
+  .fotoik{
+    max-width: 100%;
+  }
 }
