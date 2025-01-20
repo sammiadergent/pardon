@@ -11,6 +11,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  overflow-x: hidden;
+}
 
 h1{
 font-family:"Major Mono Display";
@@ -127,7 +130,7 @@ h3{
 
 .swiper {
   width: 100%;
-  height: 80dvh; /* Pas de hoogte aan naar wens */
+  height: 600px; /* Pas de hoogte aan naar wens */
 }
 
 .swiper-slide {
@@ -217,8 +220,8 @@ h3{
 /* Algemeen voor mobiele apparaten */
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.5rem; /* Verklein de titel */
-    padding-top: 5%;
+    font-size: 1.3rem; /* Verklein de titel */
+    padding:0%;
   }
 
   h2 {
@@ -227,7 +230,8 @@ h3{
 
   p {
     font-size: 0.9rem; /* Kleinere tekstgrootte */
-    padding: 0 10px; /* Voeg extra ruimte toe aan de zijkanten */
+    padding: 3px; /* Voeg extra ruimte toe aan de zijkanten */
+    text-align: center;
   }
 
   .menu {
@@ -288,42 +292,47 @@ h3{
 
   .slide-content {
     display: flex; /* Activeer Flexbox */
-    flex-direction: column; /* Zet tekst en afbeelding onder elkaar */
-    align-items: center; /* Centreer horizontaal */
-    justify-content: center; /* Centreer verticaal */
-    padding: 5%;
-    height: 100%; /* Zorg dat de hoogte van de container wordt gebruikt */
+    flex-direction: column; /* Zet tekst en afbeelding onder elkaar */ 
     text-align: center; /* Centreer tekst */
+    width: 100%; /* Zorg dat de container de volledige breedte heeft */
 }
 
-.text-section, .image-section {
-    width: 100%; /* Zorg dat de secties de volledige breedte innemen */
-    padding: 5%; /* Voeg ruimte toe aan de zijkanten */
-}
 
 .image-section img {
-    max-width: 60%; /* Zorg dat de afbeelding kleiner wordt */
-    padding-bottom: 20%;
+    max-width: 75%; /* Zorg dat de afbeelding kleiner wordt */
+    padding-left: 20px;
+}
+
+.text-section {
+    padding: 2%; /* Minder padding voor kleinere schermen */
 }
 
 .swiper {
-    height: 40dvh; /* Pas de hoogte van de Swiper aan */
+    height: 400px; /* Pas de hoogte van de Swiper aan */
+    width: 100%; /* Zorg dat de Swiper de volledige breedte heeft */
     display: flex; /* Activeer Flexbox */
     align-items: center; /* Centreer inhoud in Swiper */
     justify-content: center; /* Centreer inhoud in Swiper */
 }
+.swiper-wrapper{
+  padding-left: 10px;
+  
+
+}
 
   .omEnOm {
-    gap: 30px; /* Verminder de ruimte tussen secties */
+    width: 100%; /* Zorg dat de sectie de volledige breedte heeft */
+    padding: 0%; /* Voeg ruimte toe aan de zijkanten */
   }
 
   .left, .right {
     width: 80%; /* Zorg dat ze breder worden op mobiel */
     align-self: center; /* Centreer de secties */
+    padding: 0%;
   }
 
   #demo {
-    padding-left: 10%; /* Minder padding voor kleinere schermen */
+    padding-left: 0%; /* Minder padding voor kleinere schermen */
     padding-right: 10%;
     gap: 20px;
   }
@@ -331,6 +340,10 @@ h3{
   .meetTheMaker {
     flex-direction: column; /* Zet items onder elkaar */
     gap: 20px;
+    align-items: center;
+    justify-content: center;
+    
+    
   }
 
   .footer {
@@ -340,5 +353,25 @@ h3{
   }
   .fotoik{
     max-width: 100%;
+  }
+
+  .centreTekst{
+  padding-top: 3%;
+  }
+
+  #demo{
+    padding: 0%;
+    gap: 0px;
+    
+  }
+  .swiper-button-next, .swiper-button-prev{
+    display: none !important;
+  }
+  .lager{
+    padding-top: 50px;
+  }
+  .midden{
+    align-items: center;
+    margin-left: 33%;
   }
 }
