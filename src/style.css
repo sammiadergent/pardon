@@ -323,6 +323,7 @@ h3{
   .omEnOm {
     width: 100%; /* Zorg dat de sectie de volledige breedte heeft */
     padding: 0%; /* Voeg ruimte toe aan de zijkanten */
+    gap:5px;
   }
 
   .left, .right {
@@ -360,7 +361,10 @@ h3{
   }
 
   #demo{
-    padding: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 60px;
+    padding-bottom: 60px;
     gap: 0px;
     
   }
