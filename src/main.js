@@ -19,3 +19,19 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const fadeInElements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active'); // active triggert de fade-in
+        obs.unobserve(entry.target); // Element hoeft niet opnieuw geobserveerd te worden
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  fadeInElements.forEach(el => observer.observe(el));
+});
+
