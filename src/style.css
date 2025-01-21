@@ -11,6 +11,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   overflow-x: hidden;
 }
@@ -45,6 +48,10 @@ h3{
   font-family:"Major Mono Display";
   font-size: 1rem;
   color: white;
+ 
+}
+a{
+  text-decoration: none;
 }
 
 .menu{
@@ -56,6 +63,7 @@ h3{
   padding-right: 32px;
   background-color: #B1374E;
   color: white !important;
+  width: 100%;
 }
 
 #background{
@@ -94,6 +102,7 @@ h3{
   padding: 8px;
   border-bottom: 3px solid var(--zachtrood, #B1374E);
   align-self: center;
+  text-decoration: none; /* Verwijdert de onderstreping */
 }
 
 #intro{
